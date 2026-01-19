@@ -1,0 +1,52 @@
+import React, { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
+import "./utilities.css";
+
+import Home from "./components/home.js";
+import Academics from "./components/academics.js";
+import ProjectsPage from "./components/projects.js";
+import { MyStory } from "./components/blog.js";
+import Contact from "./components/contact.js";
+import NavBar from "./components/navbar.js";
+import Footer from "./components/footer.js";
+import {
+  PostBlog,
+  PostProject,
+  EditBlog,
+  EditProject,
+  DeleteBlog,
+  DeleteProject,
+  Admin,
+} from "./components/admin.js";
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/academics" element={<Academics />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/blog" element={<MyStory />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/newblog" element={<PostBlog />} />
+        <Route path="/newproject" element={<PostProject />} />
+        <Route path="/editblog" element={<EditBlog />} />
+        <Route path="/editproject" element={<EditProject />} />
+        <Route path="/deleteblog" element={<DeleteBlog />} />
+        <Route path="/deleteproject" element={<DeleteProject />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
+};
+
+const root = createRoot(document.getElementById("root"));
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);

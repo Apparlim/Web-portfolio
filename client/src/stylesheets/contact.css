@@ -1,0 +1,113 @@
+.contact-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+}
+
+.contact-container {
+    max-width: 600px;
+    text-align: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00d4ff, #7b68ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 30px;
+}
+
+.contact-intro {
+    font-size: 1.2rem;
+    color: #d0d0d0;
+    margin-bottom: 40px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 18px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-link.email {
+    background: rgba(0, 212, 255, 0.1);
+    color: #00d4ff;
+}
+
+.contact-link.email:hover {
+    background: rgba(0, 212, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+.contact-link.github {
+    background: rgba(255, 255, 255, 0.05);
+    color: #f0f0f0;
+}
+
+.contact-link.github:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.contact-link.linkedin {
+    background: rgba(0, 119, 181, 0.1);
+    color: #0077b5;
+}
+
+.contact-link.linkedin:hover {
+    background: rgba(0, 119, 181, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 119, 181, 0.2);
+}
+
+.link-icon {
+    font-size: 1.4rem;
+}
+
+.contact-note {
+    font-size: 1rem;
+    color: #888;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .contact-container {
+        padding: 30px 20px;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-link {
+        padding: 15px 20px;
+        font-size: 0.95rem;
+    }
+}
